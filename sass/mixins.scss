@@ -1,0 +1,31 @@
+@mixin link() {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container() {
+  width: 640px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-widths){
+    width: 960px;
+  }
+}
