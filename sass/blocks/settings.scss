@@ -1,3 +1,47 @@
 .settings {
+  position: relative;
+  background: #f2f4f8;
+}
+
+.settings__btn {
+  position: relative;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+@media (max-width: $tablet-widths) {
+.settings {
+  min-height: 100px;
+}
+
+  .settings__btn {
+    &--add {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 460px;
+      width: 40px;
+      height: 42px;
+      background: url(../images/sprite.png) -130px -63px;
+    }
+    &--filter {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 540px;
+      width: 40px;
+      height: 42px;
+      background: url(../images/sprite.png) -130px -10px;
+    }
+  }
+}
+
+@media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
 
 }
+
+@media (min-width: $desktop-widths) {
+
+}
+

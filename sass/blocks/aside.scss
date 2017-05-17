@@ -1,3 +1,26 @@
 .aside {
-
+  display: none;
+  float: left;
+  width: 172px;
+  background: #fcfdfe;
 }
+
+
+@media (min-width: $mobile-widths) {
+  .aside {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  .aside {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .aside{
+    display: block;
+  }
+}
+

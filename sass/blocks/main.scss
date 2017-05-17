@@ -1,3 +1,38 @@
 .main {
+  float: right;
+  background: #fcfdfe;
+  &__wrap {
+    position: relative;
+  }
+}
 
+.main__title {
+  margin: 30px;
+  font-size: 36px;
+  font-family: "Georgia", "Arial", sans-serif;
+  font-weight: normal;
+}
+
+@media (max-width: $tablet-widths) {
+  .main__title {
+  margin: 130px;
+  margin-top: 50px;
+  margin-bottom: 95px;
+  font-size: 60px;
+  font-family: "Georgia", "Arial", sans-serif;
+  font-weight: normal;
+}
+}
+
+@media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  .main {
+  width: 596px;
+}
+
+}
+
+@media (min-width: $desktop-widths) {
+  .main {
+    width: 788px;
+  }
 }

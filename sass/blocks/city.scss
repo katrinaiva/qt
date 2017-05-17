@@ -1,0 +1,45 @@
+  .city {
+    border: none;
+    background: none;
+    color: #727989;
+    font-size: 14px;
+    &--big {
+      position: absolute;
+      font-family: "Georgia","Arial", sans-serif;
+      color: #2d313d;
+    }
+    }
+
+
+@media (max-width: $tablet-widths) {
+  .city {
+    display: none;
+    &--big {
+      display: block;
+      top: 40px;
+      left: 145px;
+      font-size: 60px;
+    }
+  }
+}
+
+
+@media (min-width: $tablet-widths) {
+  .city {
+    margin-left: 300px;
+    &--big {
+      top: -10px;
+      left: -70px;
+      font-size: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-widths) {
+.city {
+    margin-left: 520px;
+    &--big {
+      left: -280px;
+    }
+  }
+}

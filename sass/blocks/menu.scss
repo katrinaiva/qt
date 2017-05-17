@@ -1,3 +1,42 @@
-.menu {
+@media (min-width: $mobile-widths) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-widths) {
+  .menu {
+    display: block;
+    background: #646d81;
+    &__list {
+      @include reset;
+      list-style: none;
+    }
+  }
+
+  .menu__item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .menu__link {
+    padding: 15px 0;
+    margin-right: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    &:first-child {
+      margin-left: 20px;
+    }
+    &--active {
+      padding-top: 9px;
+      border-top: 6px solid #ffffff;
+    }
+  }
 
 }
+
+@media (min-width: $desktop-widths) {
+
+}
+

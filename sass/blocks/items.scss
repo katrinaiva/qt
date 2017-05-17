@@ -1,3 +1,43 @@
-.items {
+.item {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  & picture {
+    float: left;
+    margin-right: 15px;
+  }
+}
 
+.item__wrap {
+    float: right;
+  }
+
+@media (max-width: $tablet-widths) {
+  .items {
+    margin: 50px 0;
+    margin-left: 60px;
+    margin-right: 45px;
+  }
+
+  .item__wrap {
+    width: 455px;
+  }
+}
+
+@media (min-width: $tablet-widths) {
+.items {
+    margin: 30px;
+  }
+
+  .item__wrap {
+    width: 460px;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .item__wrap {
+    width: 652px;
+  }
 }

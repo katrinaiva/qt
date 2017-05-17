@@ -1,3 +1,115 @@
 .header {
+  background: #2d313d;
+  color: #ffffff;
+}
 
+.header__item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header__title {
+  padding: 0 40px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.header__list {
+  margin: 0;
+  padding: 17px 0;
+}
+
+.header__search {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;;
+    top: -20px;
+    left: 50px;
+    width: 40px;
+    height: 42px;
+    background: url(../images/sprite.png) -70px -10px;;
+}
+}
+
+.header__toggle {
+  position: relative;
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: -20px;
+    width: 45px;
+    height: 33px;
+    background: url(../images/sprite.png) -10px -72px;
+  }
+}
+
+@media (min-width: $mobile-widths) {
+  .header__user-name {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-widths) {
+  .header__toggle, .header__title {
+    display: none;
+  }
+
+  .header__user {
+    display: inline-block;
+    margin-left: 60px;
+    color: #727989;
+    text-decoration: none;
+    &-name {
+      float: left;
+      padding: 6px;
+    }
+  }
+
+  .header__icon-notification {
+  position: relative;
+  display: block;
+  &::after {
+    content: "";
+    position: absolute;;
+    width: 17px;
+    height: 21px;
+    top: -10px;
+    background: url(../images/sprite.png) -227px -10px;
+    }
+  }
+
+  .header__icon-message {
+    position: relative;
+    display: block;
+    &::after {
+      content: "";
+      position: absolute;;
+      top: -8px;
+      left: 28px;
+      width: 22px;
+      height: 21px;
+      background: url(../images/sprite.png) -88px -150px;
+    }
+  }
+
+  .header__user-name {
+    display: block;
+  }
+
+  .header__list {
+    padding: 0;
+  }
+
+  .header__search {
+    &::after {
+      left: 20px;
+      background: url(../images/tablet-lopa-gray.png) no-repeat center;
+    }
+  }
 }

@@ -1,3 +1,49 @@
 .paginator {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;}
+
+.paginator__link {
+  display: inline-block;
+  padding: 12px 0;
+  margin-left: 10px;
+  color: #2d313d;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #99a1b3;
+  &--pre {
+    padding-left: 34px;
+    padding-right: 20px;
+    margin-left: 10px;
+  }
+  &--next {
+    padding-left: 20px;
+    padding-right: 34px;
+  }
+}
+
+
+@media (max-width: $tablet-widths) {
+  .paginator__link {
+    font-size: 28px;
+    padding: 24px 0;
+    &--pre {
+      padding-left: 70px;
+      padding-right: 40px;
+    }
+
+    &--next {
+      padding-left: 40px;
+      padding-right: 70px;
+      margin-left: 131px;
+    }
+  }
+}
+
+@media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+
+}
+
+@media (min-width: $desktop-widths) {
 
 }

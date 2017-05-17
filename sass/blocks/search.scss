@@ -1,0 +1,41 @@
+.search{
+
+}
+
+
+@media (max-width: $tablet-widths) {
+  .search__field {
+    display: none;
+  }
+
+  .search__btn {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 40px;
+    height: 42px;
+    background: url(../images/sprite.png) -10px -10px;
+  }
+}
+
+
+@media (min-width: $tablet-widths) {
+  .city {
+    margin-left: 300px;
+    &--big {
+      top: -10px;
+      left: -70px;
+      font-size: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-widths) {
+.city {
+    margin-left: 520px;
+    &--big {
+      left: -280px;
+    }
+  }
+}

@@ -10,41 +10,52 @@
     <!--[if lt IE 9]>
     <script src="scripts/html5shiv.js"></script>
   <![endif]-->
+    <script src="scripts/picturefill.js"></script>
   </head>
-<body>
+<body class="">
   <header class="header">
-    <div class="header__wrap">
-      <button class="main-menu__toggle" type="button"></button>
-      <a class="logo" href="#" title="logo">
-        <img class="logo__image" src="images/" alt="logo">
-      </a>
-      <h1 class="header__title header__title--hidden">Page title</h1>
-      <select class="city city-hidden" name="city">
+      <ul class="header__list">
+        <li class="header__item"><button class="header__toggle" type="button"></button></li>
+      <li class="header__item"><a class="logo" href="#" title="logo">
+        <picture>
+        <source media="(min-width: 960px)" srcset="images/logotype@1x.png 1x, images/logotype@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="images/logotype@1x.png 1x, images/logotype@2x.png 2x">
+        <img src="images/logotype@1x.png" srcset="images/logotype@2x.png 2x" width="86" height="54" alt="logo">
+        </picture>
+        </a></li>
+        <li class="header__item"><h2 class="header__title">Page title</h2></li>
+        <li class="header__item"><select class="city" name="city">
         <option value="new-york">New York</option>
-      </select>
-      <span class="header__icon-notification header__icon-notification--hidden"></span>
-      <span class="header__icon-message header__icon-message--hidden"></span>
-      <a class="header__user" href="#" title="user">
-        <span class="header__user-name header__user-name--hidden">User name</span>
-        <img class="header__user-avatar" src="images/" alt="avatar">
-      </a>
-      <span class="header__search header__search--hidden"></span>
-    </div>
-    <nav class="menu">
-      <ul class="menu__list menu__list--hidden">
-        <li>
-          <a class="menu-item" href="#" title="Menu item">Menu item</a></li>
-        <li>
-          <a class="menu-item" href="#" title="Menu item">Menu item</a></li>
-        <li>
-          <a class="menu-item" href="#" title="Menu item">Menu item</a></li>
-        <li>
-          <a class="menu-item menu-item--active" href="#" title="Menu item">Menu item</a></li>
-        <li>
-          <a class="menu-item" href="#" title="Menu item">Menu item</a></li>
+        </select></li>
+        <li class="header__item"><span class="header__icon-notification"></span></li>
+        <li class="header__item"><span class="header__icon-message" ></span></li>
+        <li class="header__item">
+          <a class="header__user" href="#" title="user">
+          <span class="header__user-name">User name</span>
+          <picture>
+                  <source media="(min-width: 960px)" srcset="images/avatar-footer-tablet@1x.jpg 1x, images/avatar-footer-tablet@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="images/avatar-footer-tablet@1x.jpg 1x, images/avatar-footer-tablet@2x.jpg 2x">
+                  <img src="images/avatar-footer@1x.jpg" srcset="images/avatar-footer@2x.jpg 2x" alt="avatar">
+                </picture>
+          </a></li>
+        <li class="header__item"><span class="header__search"></span></li>
+      </ul>
+    <nav class="menu menu--hidden">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Menu item">Menu item</a></li>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Menu item">Menu item</a></li>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Menu item">Menu item</a></li>
+        <li class="menu__item">
+          <a class="menu__link menu__link--active" href="#" title="Menu item">Menu item</a></li>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Menu item">Menu item</a></li>
       </ul>
     </nav>
   </header>
+  <div class="clearfix">
   <aside class="aside aside--hidden">
     <div class="submenu">
     <ul class="submenu__list">
@@ -91,23 +102,27 @@
   <main class="main">
     <div class="main__wrap">
       <h1 class="main__title">Page title in</h1>
-      <select class="city city-hidden" name="city">
+      <select class="city city--big" name="city">
         <option value="new-york">New York</option>
       </select>
     </div>
     <div class="settings">
       <form class="search" action="#" method="post">
         <input class="search__field" type="search" name="search">
-        <button class="search__btn" type="submit"></button>
+        <button class="settings__btn search__btn" type="submit"></button>
       </form>
-      <button class="settings__add" type="button">
+      <button class="settings__btn settings__btn--add" type="button">
         <span class="hidden">New item</span></button>
-      <button class="settings__filter" type="button"></button>
+      <button class="settings__btn settings__btn--filter" type="button"></button>
     </div>
     <section class="items">
       <article class="item">
-        <img class="item__img" src="images/" alt="item image">
-        <div>
+        <picture>
+        <source media="(min-width: 960px)" srcset="images/avatar-1@1x.jpg 1x, images/avatar-1@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="images/avatar-1@1x.jpg 1x, images/avatar-1@2x.jpg 2x">
+        <img src="images/avatar-1@1x.jpg" srcset="images/avatar-1@2x.jpg 2x" alt="logo">
+        </picture>
+        <div class="item__wrap">
           <p class="item__meta">
           <span class="item__username">User name</span>
           <span class="item__mark">Pro</span>
@@ -126,8 +141,12 @@
         </div>
       </article>
       <article class="item">
-        <img class="item__img" src="images/" alt="item image">
-        <div>
+        <picture>
+        <source media="(min-width: 960px)" srcset="images/avatar-2@1x.jpg 1x, images/avatar-2@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="images/avatar-2@1x.jpg 1x, images/avatar-2@2x.jpg 2x">
+        <img src="images/avatar-2@1x.jpg" srcset="images/avatar-2@2x.jpg 2x" alt="logo">
+        </picture>
+        <div class="item__wrap">
           <p class="item__meta">
           <span class="item__username">User name</span>
           <span class="item__mark">Member</span>
@@ -146,8 +165,12 @@
         </div>
       </article>
       <article class="item">
-        <img class="item__img" src="images/" alt="item image">
-        <div>
+        <picture>
+        <source media="(min-width: 960px)" srcset="images/avatar-3@1x.jpg 1x, images/avatar-3@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="images/avatar-3@1x.jpg 1x, images/avatar-3@2x.jpg 2x">
+        <img src="images/avatar-3@1x.jpg" srcset="images/avatar-3@2x.jpg 2x" alt="logo">
+        </picture>
+        <div class="item__wrap">
           <p class="item__meta">
           <span class="item__username">User name</span>
           <span class="item__mark">Member</span>
@@ -166,8 +189,12 @@
         </div>
       </article>
       <article class="item">
-        <img class="item__img" src="images/" alt="item image">
-        <div>
+        <picture>
+        <source media="(min-width: 960px)" srcset="images/avatar-4@1x.jpg 1x, images/avatar-4@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="images/avatar-4@1x.jpg 1x, images/avatar-4@2x.jpg 2x">
+        <img src="images/avatar-4@1x.jpg" srcset="images/avatar-4@2x.jpg 2x" alt="logo">
+        </picture>
+        <div class="item__wrap">
           <p class="item__meta">
           <span class="item__username">User name</span>
           <span class="item__mark">Member</span>
@@ -187,25 +214,25 @@
       </article>
     </section>
     <div class="paginator">
-      <a class="paginator-previous" href="#previous" title="">Previous</a>
-      <a class="paginator-next" href="#next" title="">Next</a>
+      <a class="paginator__link paginator__link--pre" href="#previous" title="">Previous</a>
+      <a class="paginator__link paginator__link--next" href="#next" title="">Next</a>
     </div>
   </main>
+  </div>
   <footer class="footer">
     <nav class="footer__menu">
-      <ul class="">
-        <li>About</li>
-        <li>Policies</li>
-        <li>Site Map</li>
-        <li>Help</li>
-        <li>Contact us</li>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" title="">About</a></li>
+        <li class="footer__item"><a href="#" title="">Policies</a></li>
+        <li class="footer__item"><a href="#" title="">Site Map</a></li>
+        <li class="footer__item"><a href="#" title="">Help</a></li>
+        <li class="footer__item"><a href="#" title="">Contact us</a></li>
       </ul>
     </nav>
     <div class="footer__copyright">
       <p class="footer__text">
-        <img class="footer__logo" src="images/" alt="footer logo">
-        <span>2015.</span>
-        Qulix Systems. All rights reserved.
+        <img class="footer__logo" src="images/logo-footer@1x.png" width="22" height="13" alt="footer logo">
+        2015. Qulix Systems. All rights reserved.
       </p>
     </div>
   </footer>

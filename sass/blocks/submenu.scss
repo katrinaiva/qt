@@ -1,3 +1,39 @@
 .submenu {
+  margin: 0 30px;
+}
+
+.submenu__list {
+  @include reset();
+  list-style: none;
+  margin: 0 auto;
+}
+
+.submenu__item {
+  position: relative;
+  line-height: 30px;
+  color: #a8afbe;
+  &--active {
+    color: #333333;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 5px;
+    height: 30px;
+    background-color: #99a1b3;
+    }
+  }
+}
+
+@media (min-width: $mobile-widths) {
+
+}
+
+@media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+
+}
+
+@media (min-width: $desktop-widths) {
 
 }
